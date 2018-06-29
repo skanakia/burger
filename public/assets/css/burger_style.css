@@ -1,0 +1,44 @@
+.uneaten {
+    float: left;
+    width: 33%;
+    margin-top: 100px;
+
+}
+
+.devoured {
+    float: right;
+    width: 33%;
+    margin-top: 100px;
+   
+}
+
+.central {
+    float: left;
+    width: 33%;
+    margin-top: 100px;
+    align-items: center;
+}
+
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+}
+
+.create-form {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+    text-align: center;
+}
+
+.header {
+    text-align: center;
+}
+
+
+body {
+    background-color: rgba(0, 153, 255, 0.918)
+}

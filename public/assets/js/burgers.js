@@ -1,17 +1,16 @@
 $(function() {
-    $(".devoured").on("click", function(event) {
+    $(".devour").on("click", function(event) {
       var id = $(this).data("id");
-      var newDevoured = $(this).data("newEaten");
-  
+      var newDevoured = $(this).attr("data-newEaten");
+      console.log(newDevoured);
       var newEatenState = {
         devoured: newDevoured
       };
-  
+      console.log(newEatenState);
       // Send the PUT request.
       $.ajax("/api/burger/" + id, {
         type: "PUT",
         data: newEatenState,
-        contentType: 'application/json'
 
       }).then(
         function() {
@@ -27,14 +26,14 @@ $(function() {
       event.preventDefault();
   
       var newBurger = {
-        burger_name: $("#burg").val().trim(),
-        devoured: "false" 
+        "burger_name": $("#burg").val().trim(),
+        "devoured": "false" 
       };
   
       // Send the POST request.
       $.ajax("/api/burger", {
         type: "POST",
-        data: newBurger
+        data: newBurger,
       }).then(
         function() {
           console.log("created new burger");
