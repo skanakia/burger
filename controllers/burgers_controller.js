@@ -40,7 +40,7 @@ router.post("/api/burger", function (req, res) {
     burger.create([
         "burger_name", "devoured"
     ], [
-            req.body.burger_name, 1
+            req.body.burger_name, 0
         ], function (result) {
             // Send back the ID of the new quote
             res.json({ id: result.insertId });
